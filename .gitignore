@@ -1,1 +1,6 @@
-/secrets.yaml
+*
+!*.yaml
+!scenes
+!.gitignore
+secrets.yaml
+known_devices.yaml
