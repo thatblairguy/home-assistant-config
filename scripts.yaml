@@ -1,0 +1,9 @@
+ae35:
+  alias: AE35
+  sequence:
+    - service: media_player.turn_on
+      entity_id: group.all_speakers
+    - service: tts.google_say
+      entity_id: group.all_speakers
+      data:
+        message: "I've just picked up a fault in the AE35 unit. It's going to go 100% failure within 72 hours."

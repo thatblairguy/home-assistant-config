@@ -1,0 +1,10 @@
+sensor.yr_symbol:
+  hidden: true
+media_player.bedroom:
+  hidden: true
+media_player.kitchen_speaker:
+  hidden: true
+media_player.living_room:
+  hidden: true
+media_player.office_speaker: {}
+group.all_speakers: {}
