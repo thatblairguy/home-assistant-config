@@ -4,8 +4,13 @@
   - event: sunset
     platform: sun
   action:
-    entity_id: group.christmas_lights
+  - entity_id: group.christmas_lights
     service: homeassistant.turn_on
+  - data:
+      title: Christmas lights
+      message: The lights have been turned on
+    service: notify.dactylmanor_email_sender
+
 - id: '1543332193368'
   alias: Christmas Lights off at 10:30pm
   trigger:
@@ -13,5 +18,21 @@
     platform: time
   condition: []
   action:
-    entity_id: group.christmas_lights
+  - entity_id: group.christmas_lights
     service: homeassistant.turn_off
+  - data:
+      title: Christmas lights
+      message: The lights have been turned off
+    service: notify.dactylmanor_email_sender
+    
+- id: '1543460229456'
+  alias: test
+  trigger:
+  - at: '22:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      message: Message sent
+      title: Test
+    service: notify.dactylmanor_email_sender

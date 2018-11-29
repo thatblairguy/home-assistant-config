@@ -56,8 +56,9 @@ map:
 # Track the sun
 sun:
 
-# Weather prediction
+
 sensor:
+  # Weather prediction
   - platform: yr
 
   # Crime Reports
@@ -68,24 +69,24 @@ sensor:
   # Plex monitor
   - platform: plex
     token: ZtsrXgzNsBb3USff4UeU
+
+  # Shore Leave SSL Certificate
+  - platform: cert_expiry
+    host: www.shore-leave.com
+    name: shoreleave_tls_expiry
   
 # Text to speech
 tts:
   - platform: google
 
-# Cloud
+# Disable Home Assistant Cloud service.
 #cloud:
 
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+notify: !include notifications.yaml
 
-# Configurator Icon on main menu.
-panel_iframe:
-  configurator:
-    title: Configurator
-    icon: mdi:wrench
-    url: http://hassio.local:3218
 
 # Radio Thermostat
 climate:
