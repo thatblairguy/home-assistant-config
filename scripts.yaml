@@ -1,9 +1,14 @@
 ae35:
   alias: AE35
   sequence:
+    # Turn the speakers on
     - service: media_player.turn_on
       entity_id: group.all_speakers
+    # Do something silly
     - service: tts.google_say
       entity_id: group.all_speakers
       data:
-        message: "I've just picked up a fault in the AE35 unit. It's going to go 100% failure within 72 hours."
+        message: "I've just picked up a fault in the A.E. 35 unit. It's going to go 100% failure within 72 hours."
+    # Turn the speakers back off
+    - service: media_player.turn_off
+      entity_id: group.all_speakers

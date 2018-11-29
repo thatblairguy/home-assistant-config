@@ -1,1 +1,17 @@
-[]
+- id: '1543330438173'
+  alias: Christmas Lights on at Sunset
+  trigger:
+  - event: sunset
+    platform: sun
+  action:
+    entity_id: group.christmas_lights
+    service: homeassistant.turn_on
+- id: '1543332193368'
+  alias: Christmas Lights off at 10:30pm
+  trigger:
+  - at: '22:30:00'
+    platform: time
+  condition: []
+  action:
+    entity_id: group.christmas_lights
+    service: homeassistant.turn_off
