@@ -11,4 +11,8 @@
   username: !secret dactylmanor_org_email
   password: !secret dactylmanor_org_password
   sender_name: Home Assistant
-  
+
+- name: slack_nci_spaient
+  platform: slack
+  default_channel: !secret work_slack_channel
+  api_key: !secret work_slack_oauth_token

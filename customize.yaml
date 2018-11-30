@@ -2,14 +2,13 @@ sensor.yr_symbol:
   hidden: true
 media_player.bedroom:
   hidden: true
-media_player.kitchen_speaker: {}
+media_player.kitchen_speaker:
+  hidden: true
 media_player.living_room:
   hidden: true
-media_player.office_speaker: {}
-group.all_speakers: {}
-media_player.nexus_5:
-  friendly_name: Nexus 5
+media_player.office_speaker:
   hidden: true
+group.all_speakers: {}
 media_player.pixel_2:
   hidden: true
 media_player.chrome:
@@ -17,3 +16,5 @@ media_player.chrome:
 media_player.microsoft_edge:
   hidden: true
 automation.christmas_lights_off_at_1030pm: {}
+group.christmas_lights:
+  hidden: true
