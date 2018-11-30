@@ -10,7 +10,6 @@
       title: Christmas lights
       message: The lights have been turned on
     service: notify.dactylmanor_email_sender
-
 - id: '1543332193368'
   alias: Christmas Lights off at 10:30pm
   trigger:
@@ -24,15 +23,18 @@
       title: Christmas lights
       message: The lights have been turned off
     service: notify.dactylmanor_email_sender
-    
-- id: '1543460229456'
-  alias: test
+- id: '1543538013967'
+  alias: Shore Leave SSL
   trigger:
-  - at: '22:00'
+  - at: '17:00'
     platform: time
-  condition: []
+  condition:
+  - below: '30'
+    condition: numeric_state
+    entity_id: sensor.shoreleave_tls_expiry
   action:
   - data:
-      message: Message sent
-      title: Test
+      message: The certifcate expires in {{ states.sensor.shoreleave_tls_expiry.state
+        }} days
+      title: '[alert] Shore Leave TLS certificate'
     service: notify.dactylmanor_email_sender
