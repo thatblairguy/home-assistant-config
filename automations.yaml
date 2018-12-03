@@ -38,3 +38,16 @@
         }} days
       title: '[alert] Shore Leave TLS certificate'
     service: notify.dactylmanor_email_sender
+- id: '1543629677014'
+  alias: Home
+  trigger:
+  - entity_id: device_tracker.blair_pixel2
+    event: enter
+    platform: zone
+    zone: zone.home
+  condition: []
+  action:
+  - data:
+      message: I be home
+      title: Home
+    service: notify.dactylmanor_email_sender

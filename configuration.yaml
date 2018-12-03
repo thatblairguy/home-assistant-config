@@ -13,12 +13,23 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
+  
+# Load external configuration.
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+notify: !include notifications.yaml
+zone: !include zones.yaml
 
+  
 # Enables the frontend
 frontend:
 
 # Enables configuration UI
 config:
+
+# Auto-detect iOS devices.
+ios:
 
 http:
   api_password: !secret http_password
@@ -59,11 +70,6 @@ sensor:
   # Weather prediction
   - platform: yr
 
-  # Crime Reports
-  - platform: crimereports
-    name: Crime Reports
-    radius: 2000
-
   # Plex monitor
   - platform: plex
     token: ZtsrXgzNsBb3USff4UeU
@@ -79,11 +85,6 @@ tts:
 
 # Disable Home Assistant Cloud service.
 #cloud:
-
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
-notify: !include notifications.yaml
 
 
 # Radio Thermostat
@@ -105,3 +106,13 @@ switch:
   - platform: tplink
     host: plug2
     name: "Plug 2"
+  - platform: tplink
+    host: plug3
+    name: "Plug 3"
+  - platform: tplink
+    host: plug4
+    name: "Plug 4"
+
+owntracks:
+  max_gps_accuracy: 100
+  

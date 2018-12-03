@@ -18,3 +18,6 @@ media_player.microsoft_edge:
 automation.christmas_lights_off_at_1030pm: {}
 group.christmas_lights:
   hidden: true
+automation.shore_leave_ssl:
+  hidden: true
+  id: '1543538013967'
