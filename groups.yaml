@@ -8,3 +8,4 @@ christmas_lights:
   entities:
     - switch.plug_1
     - switch.plug_2
+    - switch.plug_3
