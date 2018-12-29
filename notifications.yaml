@@ -12,7 +12,23 @@
   password: !secret dactylmanor_org_password
   sender_name: Home Assistant
 
+  
 - name: slack_nci_spaient
   platform: slack
   default_channel: !secret work_slack_channel
   api_key: !secret work_slack_oauth_token
+
+
+- name: christmas_light_notification
+  platform: smtp
+  sender: !secret dactylmanor_org_email
+  recipient:
+    - !secret dactylmanor_org_email
+  server: smtp.gmail.com
+  port: 587
+  timeout: 15
+  encryption: starttls
+  username: !secret dactylmanor_org_email
+  password: !secret dactylmanor_org_password
+  sender_name: Home Assistant
+

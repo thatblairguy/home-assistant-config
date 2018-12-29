@@ -9,7 +9,7 @@
   - data:
       title: Christmas lights
       message: The lights have been turned on
-    service: notify.dactylmanor_email_sender
+    service: notify.christmas_light_notification
 - id: '1543332193368'
   alias: Christmas Lights off at 10:30pm
   trigger:
@@ -22,7 +22,7 @@
   - data:
       title: Christmas lights
       message: The lights have been turned off
-    service: notify.dactylmanor_email_sender
+    service: notify.christmas_light_notification
 - id: '1543538013967'
   alias: Shore Leave SSL
   trigger:
