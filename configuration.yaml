@@ -115,4 +115,9 @@ switch:
 
 owntracks:
   max_gps_accuracy: 100
-  
+
+device_tracker:
+  - platform: tile
+    username: !secret dactylmanor_org_email
+    password: !secret tile_password
+    monitored_variables: [TILE]
