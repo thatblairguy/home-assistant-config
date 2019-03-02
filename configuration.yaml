@@ -71,8 +71,8 @@ sensor:
   - platform: yr
 
   # Plex monitor
-  - platform: plex
-    token: ZtsrXgzNsBb3USff4UeU
+  #- platform: plex
+  #  token: ZtsrXgzNsBb3USff4UeU
 
   # Shore Leave SSL Certificate
   - platform: cert_expiry
@@ -90,11 +90,12 @@ tts:
 # Radio Thermostat
 climate:
   - platform: radiotherm
+    host: !secret thermostat_host
 
 # Dark Sky
 weather:
   - platform: darksky
-    api_key: f03a3ecfe6e0face6bc9b60f2697077c
+    api_key: !secret darksky_api_key
     units: us
     name: Dark Sky
 
